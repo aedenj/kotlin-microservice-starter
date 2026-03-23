@@ -80,7 +80,7 @@ jobs:
       - name: Lint
         if: ${{ always() }}
         id: lint
-        uses: gruntwork-io/terragrunt-action@5e86476ca61eaf74adb9c0525745f29f921f2199 # v3.1.0
+        uses: gruntwork-io/terragrunt-action@53dbdc2c3d43e82bf3bae10b734a968196442bec # v3.2.0
         with:
           tf_path: ${{ env.TERRAFORM_BIN }}
           tg_version: ${{ env.tg_version }}
@@ -104,7 +104,7 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
 
       - name: Init
-        uses: gruntwork-io/terragrunt-action@5e86476ca61eaf74adb9c0525745f29f921f2199 # v3.1.0
+        uses: gruntwork-io/terragrunt-action@53dbdc2c3d43e82bf3bae10b734a968196442bec # v3.2.0
         with:
           tf_path: ${{ env.TERRAFORM_BIN }}
           tg_version: ${{ env.tg_version }}
@@ -117,7 +117,7 @@ jobs:
 
       - name: Validate
         id: validate
-        uses: gruntwork-io/terragrunt-action@5e86476ca61eaf74adb9c0525745f29f921f2199 # v3.1.0
+        uses: gruntwork-io/terragrunt-action@53dbdc2c3d43e82bf3bae10b734a968196442bec # v3.2.0
         with:
           tf_path: ${{ env.TERRAFORM_BIN }}
           tg_version: ${{ env.tg_version }}
@@ -130,7 +130,7 @@ jobs:
 
       - name: Plan
         id: plan
-        uses: gruntwork-io/terragrunt-action@5e86476ca61eaf74adb9c0525745f29f921f2199 # v3.1.0
+        uses: gruntwork-io/terragrunt-action@53dbdc2c3d43e82bf3bae10b734a968196442bec # v3.2.0
         with:
           tf_path: ${{ env.TERRAFORM_BIN }}
           tg_version: ${{ env.tg_version }}
